@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.App .ljf-link {
+  text-decoration: none;
+}
+.App .ljf-logo {
+  height: 72px;
+  margin-top: 48px;
+  border-radius: 8px;
+}
