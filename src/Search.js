@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "./Search.css";
 
 export default function Search(props) {
   const [dictionaryData, setDictionaryData] = useState({});
@@ -31,8 +32,12 @@ export default function Search(props) {
   if (loaded) {
     return (
       <div className="Search">
-        {dictionaryData.word}, {dictionaryData.phonetic},{" "}
-        {dictionaryData.category}, {dictionaryData.definition}
+        <h3>{dictionaryData.word}</h3>
+        <p className="phoneticDisplay">/{dictionaryData.phonetic}/</p>
+        <div className="definitionBox">
+          <p className="categoryDisplay mb-0">{dictionaryData.category}</p>
+          <p className="definitionDisplay">{dictionaryData.definition}</p>
+        </div>
       </div>
     );
   } else {

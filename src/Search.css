@@ -1,0 +1,21 @@
+.Search {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 24px;
+  border: 5px solid #008080;
+  border-radius: 12px;
+  text-align: start;
+}
+
+.Search h3 {
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+.Search p {
+  margin: 0;
+}
+.Search .categoryDisplay {
+  color: #fa0053;
+  font-weight: 600;
+}

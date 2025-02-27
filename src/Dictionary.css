@@ -1,4 +1,25 @@
 .Dictionary {
+  max-width: 700px;
+  margin: 0 auto;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.Dictionary form {
+  margin: 36px 0 48px;
+}
+.Dictionary input {
+  padding: 18px 30px;
+  border: none;
+  border-radius: 12px;
+  background-color: #efefef;
+  color: #008080;
+  font-size: 20px;
+  font-weight: 900;
+}
+.Dictionary .searchBar {
+  width: 75%;
+}
+.Dictionary .submitButton {
+  width: 20%;
+  margin-left: 24px;
 }
