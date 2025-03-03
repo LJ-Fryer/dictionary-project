@@ -20,7 +20,7 @@ function App() {
           <main>
             <h1>The Vocabulator</h1>
             <h5 className="mb-4">Okay, it's a dictionary 🔍</h5>
-            <Dictionary />
+            <Dictionary defaultKeyword="gibberish" />
           </main>
           <footer>
             <small>Coded by LJ Fryer</small>

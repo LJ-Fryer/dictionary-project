@@ -4,9 +4,10 @@ import "./Dictionary.css";
 
 import Search from "./Search";
 
-export default function Dictionary() {
-  let [keyword, setKeyword] = useState(null);
+export default function Dictionary(props) {
+  let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [dictionaryData, setDictionaryData] = useState(null);
+  let [loaded, setLoaded] = useState(false);
 
   function handleResponse(response) {
     setDictionaryData(response.data);
@@ -27,19 +28,29 @@ export default function Dictionary() {
     setKeyword(event.target.value);
   }
 
-  return (
-    <div className="Dictionary">
-      <form onSubmit={handleSubmit}>
-        <input
-          type="search"
-          autoFocus={true}
-          onChange={handleKeywordChange}
-          className="searchBar"
-          placeholder="Seek and ye shall find meaning.."
-        />
-        <input type="submit" value="Let's go" className="submitButton" />
-      </form>
-      <Search results={dictionaryData} />
-    </div>
-  );
+  function load() {
+    setLoaded(true);
+    apiCall();
+  }
+
+  if (loaded) {
+    return (
+      <div className="Dictionary">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="search"
+            autoFocus={true}
+            onChange={handleKeywordChange}
+            className="searchBar"
+            placeholder="Seek and ye shall find meaning.."
+          />
+          <input type="submit" value="Let's go" className="submitButton" />
+        </form>
+        <Search results={dictionaryData} />
+      </div>
+    );
+  } else {
+    load();
+    return "Testing";
+  }
 }
