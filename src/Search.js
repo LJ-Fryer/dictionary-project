@@ -1,5 +1,6 @@
 import React from "react";
 import Meaning from "./Meaning";
+import Synonyms from "./Synonyms";
 import "./Search.css";
 
 export default function Search(props) {
@@ -20,14 +21,16 @@ export default function Search(props) {
           })}
         </div>
         <div className="synonymsBox">
-          <h5 className="text-center">Similar words</h5>
-          <div className="d-flex justify-content-evenly">
-            <span>stroll</span>
-            <span>saunter</span>
-            <span>amble</span>
-            <span>hike</span>
-            <span>stride</span>
-          </div>
+          <h5 className="text-center mb-3">
+            <em>Synonyms</em>
+          </h5>
+          {props.results.meanings.map(function (meaning, index) {
+            return (
+              <div key={index}>
+                <Synonyms synonyms={meaning.synonyms} />
+              </div>
+            );
+          })}
         </div>
       </div>
     );
