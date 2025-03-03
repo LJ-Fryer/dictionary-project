@@ -10,7 +10,6 @@ export default function Dictionary() {
 
   function handleResponse(response) {
     setDictionaryData(response.data);
-    console.log(response.data);
   }
 
   function apiCall() {

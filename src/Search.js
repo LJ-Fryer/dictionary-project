@@ -4,8 +4,6 @@ import Synonyms from "./Synonyms";
 import "./Search.css";
 
 export default function Search(props) {
-  console.log(props.results);
-
   if (props.results) {
     return (
       <div className="Search">
