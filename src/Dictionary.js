@@ -39,7 +39,6 @@ export default function Dictionary(props) {
         <form onSubmit={handleSubmit}>
           <input
             type="search"
-            autoFocus={true}
             onChange={handleKeywordChange}
             className="searchBar"
             placeholder="Seek and ye shall find meaning.."
