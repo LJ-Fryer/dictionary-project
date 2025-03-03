@@ -8,7 +8,7 @@ export default function Search(props) {
     return (
       <div className="Search">
         <h3>{props.results.word}</h3>
-        <p className="phoneticDisplay">/{props.results.phonetic}/</p>
+        <p className="mt-2 mb-2">/{props.results.phonetic}/</p>
         <section>
           {props.results.meanings.map(function (meaning, index) {
             return (
@@ -20,9 +20,7 @@ export default function Search(props) {
         </section>
 
         <section>
-          <h5 className="mt-3 mb-1 ms-3">
-            <em>Synonyms</em>
-          </h5>
+          <h5 className="mt-3 mb-1 ms-1">Synonyms</h5>
           <div className="synonymsBox d-inline-flex">
             {props.results.meanings.map(function (meaning, index) {
               return (
