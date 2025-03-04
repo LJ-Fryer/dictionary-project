@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Dictionary.css";
-
+import Images from "./Images";
 import Search from "./Search";
 
 export default function Dictionary(props) {
@@ -46,10 +46,12 @@ export default function Dictionary(props) {
           <input type="submit" value="Let's go" className="submitButton" />
         </form>
         <Search results={dictionaryData} />
+
+        <Images keyword={keyword} />
       </div>
     );
   } else {
     load();
-    return "Testing";
+    return null;
   }
 }
