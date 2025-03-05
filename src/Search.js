@@ -21,7 +21,7 @@ export default function Search(props) {
 
         <section>
           <h5 className="mt-3 mb-1 ms-1">Synonyms</h5>
-          <div className="synonymsBox d-inline-flex">
+          <div className="synonymsBox d-flex">
             {props.results.meanings.map(function (meaning, index) {
               return (
                 <div key={index}>

@@ -4,11 +4,7 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.Dictionary .submitButton:hover {
-  background-color: #efefef;
-  color: #008080;
-  transition: all 150ms ease-in-out;
-}
+
 .Dictionary form {
   margin: 36px 0 48px;
 }
@@ -31,4 +27,9 @@
   margin-left: 24px;
   background-color: #008080;
   color: #efefef;
+}
+.Dictionary .submitButton:hover {
+  background-color: #efefef;
+  color: rgb(244, 67, 75);
+  transition: all 150ms ease-in-out;
 }
