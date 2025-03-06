@@ -10,18 +10,30 @@ export default function Search(props) {
         <div className="text-danger">Oops, can't find that. Try again</div>
       );
     } else {
+      const groupedMeanings = props.results.meanings.reduce((acc, meaning) => {
+        const { partOfSpeech } = meaning;
+        if (!acc[partOfSpeech]) {
+          acc[partOfSpeech] = [];
+        }
+        acc[partOfSpeech].push(meaning);
+        return acc;
+      }, {});
+
       return (
         <div className="Search">
           <h3>{props.results.word}</h3>
           <p className="mt-2 mb-2">/{props.results.phonetic}/</p>
           <section>
-            {props.results.meanings.map((meaning, index) => {
-              return (
+            {Object.entries(groupedMeanings).map(
+              ([partOfSpeech, meanings], index) => (
                 <div key={index} className="definitionBox mb-2">
-                  <Meaning meaning={meaning} />
+                  <p className="categoryDisplay mb-0">{partOfSpeech}</p>
+                  {meanings.map((meaning, idx) => (
+                    <Meaning key={idx} meaning={meaning} />
+                  ))}
                 </div>
-              );
-            })}
+              )
+            )}
           </section>
 
           <section>
