@@ -15,7 +15,7 @@ export default function Search(props) {
           <h3>{props.results.word}</h3>
           <p className="mt-2 mb-2">/{props.results.phonetic}/</p>
           <section>
-            {props.results.meanings.map(function (meaning, index) {
+            {props.results.meanings.map((meaning, index) => {
               return (
                 <div key={index} className="definitionBox mb-2">
                   <Meaning meaning={meaning} />
@@ -27,7 +27,7 @@ export default function Search(props) {
           <section>
             <h5 className="mt-3 mb-1 ms-1">Synonyms</h5>
             <div className="synonymsBox d-flex flex-wrap">
-              {props.results.meanings.map(function (meaning, index) {
+              {props.results.meanings.map((meaning, index) => {
                 return (
                   <div key={index}>
                     <Synonyms synonyms={meaning.synonyms} />

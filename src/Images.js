@@ -5,7 +5,7 @@ export default function Images(props) {
   if (props.images) {
     return (
       <div className="Images d-flex mt-5 me-2 ms-2 justify-content-between">
-        {props.images.slice(0, 3).map(function (image, index) {
+        {props.images.slice(0, 3).map((image, index) => {
           return (
             <a
               href={image.src.original}
