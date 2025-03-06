@@ -57,6 +57,18 @@ export default function Dictionary(props) {
         <Search results={dictionaryData} />
 
         <Images images={images} />
+        <em>
+          <p className="mt-4">
+            Images supplied by{" "}
+            <a
+              href="https://www.pexels.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pexels
+            </a>
+          </p>
+        </em>
       </div>
     );
   } else {
