@@ -1,6 +1,5 @@
 import React from "react";
 import "./Images.css";
-import axios from "axios";
 
 export default function Images(props) {
   if (props.images) {
