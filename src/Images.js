@@ -16,7 +16,7 @@ export default function Images(props) {
                 src={image.src.original}
                 key={index}
                 alt={image.alt}
-                className="image-fluid"
+                className="image-fluid mb-2"
               />
             </a>
           );

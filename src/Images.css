@@ -1,5 +1,18 @@
+.Images {
+  flex-direction: column;
+}
+
 .Images img {
-  max-width: 200px;
+  max-width: 300px;
   border-radius: 5px;
   box-shadow: 0px 8px 24px rgba(51, 51, 51, 0.2);
+}
+
+@media (min-width: 992px) {
+  .Images {
+    flex-direction: row;
+  }
+  .Images img {
+    max-width: 200px;
+  }
 }

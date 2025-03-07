@@ -52,7 +52,7 @@ export default function Dictionary(props) {
             className="searchBar"
             placeholder="Seek and ye shall find meaning.."
           />
-          <input type="submit" value="Let's go" className="submitButton" />
+          <input type="submit" value="🔍" className="submitButton" />
         </form>
         <Search results={dictionaryData} />
 

@@ -19,7 +19,7 @@ function App() {
           </header>
           <main>
             <h1>The Vocabulator</h1>
-            <h5 className="mb-4">Okay, it's a dictionary 🔍</h5>
+            <h5 className="mb-4">Okay, it's a dictionary</h5>
             <Dictionary defaultKeyword="funny" />
           </main>
           <footer>
