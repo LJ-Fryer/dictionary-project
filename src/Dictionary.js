@@ -45,11 +45,11 @@ export default function Dictionary(props) {
   if (loaded) {
     return (
       <div className="Dictionary">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="inputWrapper">
           <input
             type="search"
             onChange={handleKeywordChange}
-            className="searchBar"
+            className="inputBar"
             placeholder="Seek and ye shall find meaning.."
           />
           <input type="submit" value="🔍" className="submitButton" />
