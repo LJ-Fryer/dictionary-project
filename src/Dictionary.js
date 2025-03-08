@@ -47,7 +47,7 @@ export default function Dictionary(props) {
       <div className="Dictionary">
         <form onSubmit={handleSubmit} className="inputWrapper">
           <input
-            type="search"
+            type="text"
             onChange={handleKeywordChange}
             className="inputBar"
             placeholder="Seek and ye shall find meaning.."
