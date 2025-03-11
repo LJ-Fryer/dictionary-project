@@ -11,10 +11,10 @@ export default function Images(props) {
               href={image.src.original}
               target="_blank"
               rel="noopener noreferrer"
+              key={index}
             >
               <img
                 src={image.src.original}
-                key={index}
                 alt={image.alt}
                 className="image-fluid mb-2"
               />
